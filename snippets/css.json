@@ -1,0 +1,122 @@
+{
+	"Commandes CSS": {
+		"prefix": "css",
+		"body": [
+			"$1 {",
+			"\t$2",
+			"}"
+		],
+		"description": "Règle CSS générique"
+	},
+	"Couleur de texte": {
+		"prefix": "col",
+		"body": [
+			"color: $1;"
+		],
+		"description": "Définir la couleur du texte"
+	},
+
+	"Fond de page": {
+		"prefix": "backg",
+		"body": [
+			"background: url($1);"
+		],
+		"description": "Définir le fond de la page"
+	},
+
+	"Taille de police": {
+		"prefix": "size",
+		"body": [
+			"font-size: $1;"
+		],
+		"description": "Définir la taille de la police"
+	},
+
+	"Centrer un élément": {
+		"prefix": "center",
+		"body": [
+			"margin-left: auto;",
+			"margin-right: auto;"
+		],
+		"description": "Centrer un élément"
+	},
+
+	"Marge extérieure": {
+		"prefix": "margin",
+		"body": [
+			"margin: $1;"
+		],
+		"description": "Définir la marge extérieure"
+	},
+
+	"Marge intérieure": {
+		"prefix": "padding",
+		"body": [
+			"padding: $1;"
+		],
+		"description": "Définir la marge intérieure"
+	},
+
+	"Bordure": {
+		"prefix": "border",
+		"body": [
+			"border: $1;"
+		],
+		"description": "Définir une bordure"
+	},
+
+	"Texte gras": {
+		"prefix": "bold",
+		"body": [
+			"font-weight: bold;"
+		],
+		"description": "Texte en gras"
+	},
+
+	"Texte italique": {
+		"prefix": "italic",
+		"body": [
+			"font-style: italic;"
+		],
+		"description": "Texte en italique"
+	},
+
+	"Texte souligné": {
+		"prefix": "underline",
+		"body": [
+			"text-decoration: underline;"
+		],
+		"description": "Texte souligné"
+	},
+
+	"Alignement du texte - Gauche": {
+		"prefix": "left",
+		"body": [
+			"text-align: left;"
+		],
+		"description": "Aligner le texte à gauche"
+	},
+	"Largeur de l'élément": {
+		"prefix": "width",
+		"body": [
+			"width: $1;"
+		],
+		"description": "Définir la largeur de l'élément"
+	},
+
+	"Hauteur de l'élément": {
+		"prefix": "height",
+		"body": [
+			"height: $1;"
+		],
+		"description": "Définir la hauteur de l'élément"
+	},
+	"Centrer une image horizontalement": {
+		"prefix": "centerImg",
+		"body": [
+			"display: block;",
+			"margin: 0 auto;"
+		],
+		"description": "Centrer une image horizontalement"
+	}
+}

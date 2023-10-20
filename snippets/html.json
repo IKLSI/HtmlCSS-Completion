@@ -1,0 +1,178 @@
+{
+	"Génère l'en-tête HTML de base": {
+		"prefix": "doctype",
+		"body": [
+			"<!DOCTYPE html>",
+			"<html lang=\"FR\">",
+			"<head>",
+			"\t<meta charset=\"UTF-8\">",
+			"\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+			"\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+			"\t<meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">",
+			"\t<title>Ma page Web</title>",
+			"\t<link rel=\"stylesheet\" href=\"./style.css\">",
+			"</head>",
+			"<body>",
+			"\t$2",
+			"</body>",
+			"</html>"
+		],
+		"description": "Génère l'en-tête HTML de base"
+	},
+	"Insère un style CSS en ligne": {
+		"prefix": "style",
+		"body": [
+			"<style>",
+			"\t$1",
+			"</style>"
+		],
+		"description": "Insère un style CSS en ligne"
+	},
+	"Insère une balise de division (div)": {
+		"prefix": "div",
+		"body": [
+			"<div>",
+			"\t$1",
+			"</div>"
+		],
+		"description": "Insère une balise de division (div)"
+	},
+	"Ajoute une balise de paragraphe": {
+		"prefix": "p",
+		"body": [
+			"<p>$1</p>"
+		],
+		"description": "Ajoute une balise de paragraphe"
+	},
+	"Insère une balise de lien (a)": {
+		"prefix": "lien",
+		"body": [
+			"<a href=\"$1\">$2</a>"
+		],
+		"description": "Insère une balise de lien (a)"
+	},
+	"Insère un lien de renvoi pour une image": {
+		"prefix": "lienImg",
+		"body": [
+			"<a href=\"$1\"><img src=\"$2\" alt=\"$3\"></a>"
+		]
+	},
+	"Crée une liste non ordonnée (ul)": {
+		"prefix": "ul",
+		"body": [
+			"<ul>",
+			"\t<li>$1</li>",
+			"</ul>"
+		],
+		"description": "Crée une liste non ordonnée (ul)"
+	},
+	"Crée une liste ordonnée (ol)": {
+		"prefix": "ol",
+		"body": [
+			"<ol>",
+			"\t<li>$1</li>",
+			"</ol>"
+		],
+		"description": "Crée une liste ordonnée (ol)"
+	},
+	"Insère une image (img)": {
+		"prefix": "img",
+		"body": [
+			"<img src=\"$1\" alt=\"$2\">"
+		],
+		"description": "Insère une image (img)"
+	},
+	"Ajoute un formulaire (form)": {
+		"prefix": "form",
+		"body": [
+			"<form action=\"$1\" method=\"$2\">",
+			"\t$3",
+			"\t<input type=\"text\" name=\"$1\" id=\"$2\">",
+			"\t<input type=\"password\" name=\"$1\" id=\"$2\">",
+			"\t<input type=\"checkbox\" name=\"$1\" id=\"$2\">",
+			"\t<input type=\"radio\" name=\"$1\" id=\"$2\">",
+			"\t<textarea name=\"$1\" id=\"$2\" rows=\"$3\" cols=\"$4\"></textarea>",
+			"\t<select name=\"$1\" id=\"$2\">",
+			"\t\t<option value=\"$3\">$4</option>",
+			"\t</select>",
+			"\t<input type=\"reset\" value=\"$4\">",
+			"\t<input type=\"submit\" value=\"$4\">",
+			"</form>"
+		],
+		"description": "Ajoute un formulaire (form)"
+	},
+	"Crée une grille CSS (flexbox)": {
+		"prefix": "grille",
+		"body": [
+			"<div class=\"container\">",
+			"\t<div class=\"item\">$1</div>",
+			"\t<div class=\"item\">$2</div>",
+			"</div>"
+		],
+		"description": "Crée une grille CSS (flexbox)"
+	},
+	"Insère un commentaire HTML": {
+		"prefix": "com",
+		"body": ["<!-- $1 -->"],
+		"description": "Insère un commentaire HTML"
+	},
+	"En-tête (Header)": {
+		"prefix": "header",
+		"body": [
+			"<header>",
+			"\t$1",
+			"</header>"
+		],
+		"description": "Insère un en-tête (Header)"
+	},
+	"Navigation (Nav)": {
+		"prefix": "nav",
+		"body": [
+			"<nav>",
+			"\t$1",
+			"</nav>"
+		],
+		"description": "Insère une navigation (Nav)"
+	},
+	"Section (Section)": {
+		"prefix": "sec",
+		"body": [
+			"<section>",
+			"\t$1",
+			"</section>"
+		],
+		"description": "Insère une section (Section)"
+	},
+	"Pied de page générique": {
+		"prefix": "foot",
+		"body": [
+			"<footer>",
+			"\t<div class=\"contenu_Footer\">",
+			"\t\t<div class=\"footer_Section\">",
+			"\t\t\t<h3>$1</h3>",
+			"\t\t\t$2",
+			"\t\t</div>",
+			"\t\t<div class=\"footer_Section\">",
+			"\t\t\t<h3>$3</h3>",
+			"\t\t\t$4",
+			"\t\t</div>",
+			"\t</div>",
+			"</footer>"
+		],
+		"description": "Insère un pied de page générique"
+	},
+	"Insère le script jquery": {
+		"prefix": "jquery",
+		"body": [
+			"<script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></script>"
+		],
+		"description": "Insère le script jquery"
+	},
+	"Insère le css fontawesome": {
+		"prefix": "font",
+		"body": [
+			"<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css\">"
+		],
+		"description": "Insère le script fontawesome"
+	}
+}
