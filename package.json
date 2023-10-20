@@ -1,0 +1,72 @@
+{
+	"name": "htmlcss-completion",
+	"displayName": "HtmlCss-Completion",
+	"description": "Extension Vscode permettant d'ajouter des snippets pour les langages html et css",
+	"version": "1.0.0",
+	"publisher": "Kyliann Levesque",
+	"engines": {
+		"vscode": "^1.83.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/IKLSI/HtmlCSS-Completion"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:html",
+		"onLanguage:css"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "htmlcss-completion.helloWorld",
+				"title": "htmlcss-completion"
+			}
+		],
+		"languages": [
+			{
+				"id": "html",
+				"aliases": ["HTML", "html"],
+				"extensions": [".html"]
+			},
+			{
+				"id": "css",
+				"aliases": ["CSS", "css"],
+				"extensions": [".css"]
+			}
+		],
+		"snippets": [
+			{
+				"language": "html",
+				"path": "./snippets/html.json"
+			},
+			{
+				"language": "css",
+				"path": "./snippets/css.json"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.83.0",
+		"@types/mocha": "^10.0.2",
+		"@types/node": "18.x",
+		"@typescript-eslint/eslint-plugin": "^6.7.3",
+		"@typescript-eslint/parser": "^6.7.3",
+		"eslint": "^8.50.0",
+		"glob": "^10.3.3",
+		"mocha": "^10.2.0",
+		"typescript": "^5.2.2",
+		"@vscode/test-electron": "^2.3.4"
+	}
+}
