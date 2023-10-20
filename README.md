@@ -1,6 +1,6 @@
 # HTML Completion - Extension Visual Studio Code
 
-![Logo HTML Completion](https://example.com/html-completion.png)
+![Logo HTML Completion](https://code.visualstudio.com/assets/docs/editor/intellisense/intellisense_packagejson.gif)
 
 ## Aperçu
 
