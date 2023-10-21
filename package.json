@@ -2,8 +2,9 @@
 	"name": "htmlcss-completion",
 	"displayName": "HtmlCss-Completion",
 	"description": "Extension Vscode permettant d'ajouter des snippets pour les langages html et css",
-	"version": "1.0.0",
-	"publisher": "Kyliann Levesque",
+	"version": "1.0.2",
+	"publisher": "0KLS0",
+	"icon": "logo.png",
 	"engines": {
 		"vscode": "^1.83.0"
 	},
@@ -68,5 +69,6 @@
 		"mocha": "^10.2.0",
 		"typescript": "^5.2.2",
 		"@vscode/test-electron": "^2.3.4"
-	}
+	},
+	"license": "Custom License"
 }

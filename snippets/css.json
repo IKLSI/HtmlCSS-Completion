@@ -2,7 +2,7 @@
 	"Commandes CSS": {
 		"prefix": "css",
 		"body": [
-			"$1 {",
+			"* {",
 			"\t$2",
 			"}"
 		],
@@ -11,7 +11,9 @@
 	"Couleur de texte": {
 		"prefix": "col",
 		"body": [
-			"color: $1;"
+			"p {",
+			"color: $1;",
+			"}"
 		],
 		"description": "Définir la couleur du texte"
 	},
@@ -19,7 +21,9 @@
 	"Fond de page": {
 		"prefix": "backg",
 		"body": [
-			"background: url($1);"
+			"body {",
+			"background: url($1);",
+			"}"
 		],
 		"description": "Définir le fond de la page"
 	},
@@ -27,7 +31,9 @@
 	"Taille de police": {
 		"prefix": "size",
 		"body": [
-			"font-size: $1;"
+			"p {",
+			"font-size: $1;",
+			"}"
 		],
 		"description": "Définir la taille de la police"
 	},
@@ -35,8 +41,10 @@
 	"Centrer un élément": {
 		"prefix": "center",
 		"body": [
+			"div {",
 			"margin-left: auto;",
-			"margin-right: auto;"
+			"margin-right: auto;",
+			"}"
 		],
 		"description": "Centrer un élément"
 	},
@@ -44,7 +52,9 @@
 	"Marge extérieure": {
 		"prefix": "margin",
 		"body": [
-			"margin: $1;"
+			"div {",
+			"margin: $1;",
+			"}"
 		],
 		"description": "Définir la marge extérieure"
 	},
@@ -52,7 +62,9 @@
 	"Marge intérieure": {
 		"prefix": "padding",
 		"body": [
-			"padding: $1;"
+			"div {",
+			"padding: $1;",
+			"}"
 		],
 		"description": "Définir la marge intérieure"
 	},
@@ -60,7 +72,9 @@
 	"Bordure": {
 		"prefix": "border",
 		"body": [
-			"border: $1;"
+			"div {",
+			"border: $1;",
+			"}"
 		],
 		"description": "Définir une bordure"
 	},
@@ -68,7 +82,9 @@
 	"Texte gras": {
 		"prefix": "bold",
 		"body": [
-			"font-weight: bold;"
+			"p {",
+			"font-weight: bold;",
+			"}"
 		],
 		"description": "Texte en gras"
 	},
@@ -76,15 +92,19 @@
 	"Texte italique": {
 		"prefix": "italic",
 		"body": [
-			"font-style: italic;"
+			"p {",
+			"font-style: italic;",
+			"}"
 		],
 		"description": "Texte en italique"
-	},
+	}, 
 
 	"Texte souligné": {
 		"prefix": "underline",
 		"body": [
-			"text-decoration: underline;"
+			"p {",
+			"text-decoration: underline;",
+			"}"
 		],
 		"description": "Texte souligné"
 	},
@@ -92,14 +112,18 @@
 	"Alignement du texte - Gauche": {
 		"prefix": "left",
 		"body": [
-			"text-align: left;"
+			"p {",
+			"text-align: left;",
+			"}"
 		],
 		"description": "Aligner le texte à gauche"
 	},
 	"Largeur de l'élément": {
 		"prefix": "width",
 		"body": [
-			"width: $1;"
+			"img {",
+			"width: $1;",
+			"}"
 		],
 		"description": "Définir la largeur de l'élément"
 	},
@@ -107,16 +131,41 @@
 	"Hauteur de l'élément": {
 		"prefix": "height",
 		"body": [
-			"height: $1;"
+			"img {",
+			"height: $1;",
+			"{"
 		],
 		"description": "Définir la hauteur de l'élément"
 	},
 	"Centrer une image horizontalement": {
 		"prefix": "centerImg",
 		"body": [
+			" img {",
 			"display: block;",
-			"margin: 0 auto;"
+			"margin: 0 auto;",
+			"}"
 		],
 		"description": "Centrer une image horizontalement"
+	},
+	"Style footer": {
+		"prefix": "styleFooter",
+		"body": [
+			"footer: {",
+				"margin-top: 4rem",
+				"padding: 20px",
+				"text-align: center",
+				"color: #767676",
+				"box-shadow: 0 2px 5px 0 rgba(0,0,0,0.75)",
+			  "},",
+			  "contenu_Footer {",
+				"display: flex",
+				"justify-content: center",
+			  "},",
+			  "footer_Section {",
+				"flex: 1",
+				"margin: 0 40px",
+				"max-width: 300px",
+			  "}"
+		]
 	}
 }

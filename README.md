@@ -59,6 +59,15 @@ Il n'y a actuellement aucun problème connu avec cette extension.
 
 - Version initiale de l'extension.
 
+### 1.0.1
+
+- Ajout d'une Licence.
+- Ajout et modification de snippets concernant la partie CSS.
+
+### 1.0.2
+
+- Ajout d'un logo pour l'extension.
+
 ---
 
 ## Support et Commentaires
@@ -69,4 +78,4 @@ Si vous rencontrez des problèmes ou avez des commentaires, n'hésitez pas à [s
 
 ## Auteur
 
-Cette extension a été créée par KLS.
+Cette extension a été créée par 0KLS0.
