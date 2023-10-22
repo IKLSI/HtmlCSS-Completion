@@ -30,24 +30,27 @@ L'extension comprend un ensemble de snippets pour générer des balises HTML, de
 - Préfixe : `jquery`
 - Description : Insère un lien vers le script jQuery.
 
-### Élément CSS permettant de centrer le contenu
+### A l'aide du raccourci clavier `Ctrl+Shift+P` vous pouvez :
 
-- Préfixe : `center`
-- Description : Insère un élément CSS permettant de centrer le contenu.
+- Préfixe : `Valider le code HTML`
+- Description : Ouvre la page de validation W3C pour valider le code HTML.
 
-### Élément CSS permettant de centrer une image
+- Préfixe : `Voir la page de l'exension`
+- Description : Ouvre le fichier README.md de l'extension.
 
-- Préfixe : `centerImg`
-- Description : Insère un élément CSS permettant de centrer une image.
+- Préfixe : `Liste choix`
+- Description : Vous demande de choisir un nombre et intégre le nombre d'élément d'une liste dans votre code HTML.
+
+### Pour voir la liste des snippets disponibles
+
+- Appuyez sur `Ctrl+Space` (Windows, Linux) ou `Cmd+Space` (macOS) pour voir la liste des snippets disponibles dans un fichier
+HTML ou CSS.
 
 ...
 
 ## Utilisation
 
 Pour utiliser les snippets, il suffit de commencer à taper le préfixe dans un fichier HTML et de sélectionner l'option appropriée dans la liste des suggestions.
-
-![Utilisation des snippets](https://example.com/html-completion-usage.gif)
-
 
 ## Problèmes Connus
 
@@ -67,6 +70,12 @@ Il n'y a actuellement aucun problème connu avec cette extension.
 ### 1.0.2
 
 - Ajout d'un logo pour l'extension.
+
+### 1.0.3
+
+- Ajout de nombreux snippets concernant pour la partie HTML et CSS.
+- Ajout de plusieurs commandes exécutables avec le raccourci clavier `Ctrl+Shift+P`.
+- Amélioration de la documentation.
 
 ---
 

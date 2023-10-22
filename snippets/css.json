@@ -148,7 +148,7 @@
 		"description": "Centrer une image horizontalement"
 	},
 	"Style footer": {
-		"prefix": "styleFooter",
+		"prefix": "styleFoot",
 		"body": [
 			"footer: {",
 				"margin-top: 4rem",
@@ -166,6 +166,76 @@
 				"margin: 0 40px",
 				"max-width: 300px",
 			  "}"
-		]
+		],
+		"description": "Style footer"
+	},
+	"Documentation CSS": {
+		"prefix": "docCSS",
+		"body": [
+			"/*",
+			"Le CSS est un langage qui permet de créer des pages web à l'apparence soignée.",
+			"CSS est un langage basé sur des règles — on définit des règles de styles destinées à des éléments ou des groupes d'éléments particuliers dans la page",
+			"*/"
+		],
+		"description": "Documentation CSS"
+	},
+	"Responsive avec Media Query": {
+		"prefix": "media",
+		"body": [
+			"@media screen and (max-width: $1) {",
+			"\t$2",
+			"}"
+		],
+		"description": "Responsive avec Media Query"
+	},
+	"Déclaration d'une classe": {
+		"prefix": "class",
+		"body": [
+			".${1:nom_classe} {",
+			"\t$2",
+			"}"
+		],
+		"description": "Déclaration d'une classe"
+	},
+	"Style grille": {
+		"prefix": "stylePart",
+		"body": [
+			".container {",
+			"\tdisplay: flex;",
+			"\tjustify-content: space-between;",
+			"}",
+			".item {",
+			"\twidth: 48%; /* Vous pouvez ajuster la largeur en fonction de vos besoins */",
+			"}"
+		],
+		"description": "Style 2 parties"
+	},
+	"KeyFrames": {
+		"prefix": "keyframes",
+		"body": [
+			"@keyframes ${1:nom_animation} {",
+			"\t0% {",
+			"\t\t$2",
+			"\t}",
+			"\t100% {",
+			"\t\t$3",
+			"\t}",
+			"}"
+		],
+		"description": "KeyFrames"
+	},
+	"Animation": {
+		"prefix": "animation",
+		"body": [
+			"animation: ${1:nom_animation} ${2:temps} ${3:nombre} ${4:temps} ${5:nombre} ${6:mode} ${7:nombre} ${8:mode};"
+		],
+		"description": "Animation"
+	},
+	"Gradient": {
+		"prefix": "gradient",
+		"body": [
+			"background: linear-gradient(to ${1:direction}, ${2:couleur1}, ${3:couleur2});"
+		],
+		"description": "Gradient"
 	}
 }

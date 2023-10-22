@@ -18,7 +18,35 @@ function activate(context) {
         // Display a message box to the user
         vscode.window.showInformationMessage('Hello World from Html-Completion!');
     });
+    let insertion = vscode.commands.registerCommand('html-completion.insertion', async () => {
+        // Demander à l'utilisateur de saisir le nombre d'éléments <li> à créer
+        const numItems = await vscode.window.showInputBox({
+            prompt: 'Combien d\'éléments <li> voulez-vous créer ?',
+            placeHolder: 'Entrez un nombre'
+        });
+        if (numItems) {
+            // Générer le code HTML avec le nombre spécifié de balises <li> avec indentation
+            const indentation = '\t'; // Utilisez ici le caractère d'indentation souhaité
+            const liItems = Array.from({ length: parseInt(numItems) }, () => `${indentation}<li>$1</li>`).join('\n');
+            // Insérer le code HTML dans l'éditeur
+            const editor = vscode.window.activeTextEditor;
+            if (editor) {
+                editor.insertSnippet(new vscode.SnippetString(`<ul>\n${liItems}\n</ul>`));
+            }
+        }
+    });
+    let validateur = vscode.commands.registerCommand('html-completion.validateur', () => {
+        vscode.env.openExternal(vscode.Uri.parse('https://validator.w3.org/#validate_by_input'));
+    });
+    let github = vscode.commands.registerCommand('html-completion.github', () => {
+        vscode.env.openExternal(vscode.Uri.parse('https://github.com/IKLSI/HtmlCSS-Completion#html-completion---extension-visual-studio-code'));
+        vscode.env.openExternal(vscode.Uri.parse('https://marketplace.visualstudio.com/items?itemName=0KLS0.htmlcss-completion'));
+        vscode.window.showInformationMessage('Merci pour votre soutien !');
+    });
     context.subscriptions.push(disposable);
+    context.subscriptions.push(insertion);
+    context.subscriptions.push(validateur);
+    context.subscriptions.push(github);
 }
 exports.activate = activate;
 // This method is called when your extension is deactivated

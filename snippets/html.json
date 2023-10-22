@@ -52,7 +52,7 @@
 		"description": "Insère une balise de lien (a)"
 	},
 	"Insère un lien de renvoi pour une image": {
-		"prefix": "lienImg",
+		"prefix": "img",
 		"body": [
 			"<a href=\"$1\"><img src=\"$2\" alt=\"$3\"></a>"
 		]
@@ -75,13 +75,6 @@
 		],
 		"description": "Crée une liste ordonnée (ol)"
 	},
-	"Insère une image (img)": {
-		"prefix": "img",
-		"body": [
-			"<img src=\"$1\" alt=\"$2\">"
-		],
-		"description": "Insère une image (img)"
-	},
 	"Ajoute un formulaire (form)": {
 		"prefix": "form",
 		"body": [
@@ -102,7 +95,7 @@
 		"description": "Ajoute un formulaire (form)"
 	},
 	"Crée une grille CSS (flexbox)": {
-		"prefix": "grille",
+		"prefix": "part",
 		"body": [
 			"<div class=\"container\">",
 			"\t<div class=\"item\">$1</div>",
@@ -174,5 +167,30 @@
 			"<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css\">"
 		],
 		"description": "Insère le script fontawesome"
+	},
+	"Documentation du langage": {
+		"prefix": "doc",
+		"body": [
+			"C’est un langage qui permet de composer des pages web. On parle de langage de balisage et non de langage de programmation,",
+			"car le but du HTML est d’encadrer les différents éléments présents dans une page (images, titres, paragraphes ...) par des balises",
+			"pour leur permettre d’être mis en forme secondairement (via une feuille de style) et pour leur donner du sens."
+		],
+		"description": "Documentation du langage"
+	},
+	"Utilisation d'un tableau": {
+		"prefix": "tableau",
+		"body": [
+			"<table>",
+			"\t<tr>",
+			"\t\t<th>Entête 1</th>",
+			"\t\t<th>Entête 2</th>",
+			"\t</tr>",
+			"\t<tr>",
+			"\t\t<td>$1</td>",
+			"\t\t<td>$2</td>",
+			"\t</tr>",
+			"</table>"
+		],
+		"description": "Utilisation d'un tableau"
 	}
 }
