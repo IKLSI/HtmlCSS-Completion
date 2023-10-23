@@ -43,3 +43,13 @@ save it and close it.
 
 - Updated the CHANGELOG.md file.
 - Updated the README.md file.
+
+## [1.0.5] - 10/23/2023
+
+### Updated
+
+- Updated the LICENSE file.
+
+### Deleted
+
+- Deleted diffents commands becomming useless.

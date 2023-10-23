@@ -4,9 +4,6 @@ exports.deactivate = exports.activate = void 0;
 const vscode = require("vscode");
 function activate(context) {
     console.log('Congratulations, your extension "html-completion" is now active!');
-    let disposable = vscode.commands.registerCommand('html-completion.helloWorld', () => {
-        vscode.window.showInformationMessage('Hello World from Html-Completion!');
-    });
     let insertion = vscode.commands.registerCommand('html-completion.insertion', async () => {
         const numItems = await vscode.window.showInputBox({
             prompt: 'Combien d\'éléments <li> voulez-vous créer ?',
@@ -47,11 +44,10 @@ function activate(context) {
             }
         });
     });
-    context.subscriptions.push(openNotes);
-    context.subscriptions.push(disposable);
     context.subscriptions.push(insertion);
     context.subscriptions.push(validateur);
     context.subscriptions.push(github);
+    context.subscriptions.push(openNotes);
 }
 exports.activate = activate;
 function deactivate() { }

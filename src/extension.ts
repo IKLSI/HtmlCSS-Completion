@@ -3,10 +3,6 @@ import * as vscode from 'vscode';
 export function activate(context: vscode.ExtensionContext) {
 	console.log('Congratulations, your extension "html-completion" is now active!');
 
-	let disposable = vscode.commands.registerCommand('html-completion.helloWorld', () => {
-		vscode.window.showInformationMessage('Hello World from Html-Completion!');
-	});
-
 	let insertion = vscode.commands.registerCommand('html-completion.insertion', async () => {
 		const numItems = await vscode.window.showInputBox({
 			prompt: 'Combien d\'éléments <li> voulez-vous créer ?',
@@ -59,11 +55,10 @@ export function activate(context: vscode.ExtensionContext) {
 		});
 	});
 
-	context.subscriptions.push(openNotes);
-	context.subscriptions.push(disposable);
 	context.subscriptions.push(insertion);
 	context.subscriptions.push(validateur);
 	context.subscriptions.push(github);
+	context.subscriptions.push(openNotes);
 }
 
 export function deactivate() {}

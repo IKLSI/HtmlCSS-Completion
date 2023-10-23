@@ -64,7 +64,7 @@ Les notes de version sont disponibles dans le fichier CHANGELOG.md.
 
 <b>Version actuelle :</b>
 
-<a href="https://marketplace.visualstudio.com/items?itemName=0KLS0.html-completion" target="_blank"><img src="https://img.shields.io/badge/Visual%20Studio%20Marketplace-v1.0.4-blue?style=for-the-badge&logo=visual-studio-code" alt="Visual Studio Marketplace Version"></a>
+<a href="https://marketplace.visualstudio.com/items?itemName=0KLS0.html-completion" target="_blank"><img src="https://img.shields.io/badge/Visual%20Studio%20Marketplace-v1.0.5-blue?style=for-the-badge&logo=visual-studio-code" alt="Visual Studio Marketplace Version"></a>
 
 ## Support et Commentaires
 

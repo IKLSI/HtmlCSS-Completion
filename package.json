@@ -7,10 +7,10 @@
 		"HTML",
 		"CSS",
 		"snippets",
-		"complétion",
-		"bloc-notes"
+		"autocomplétion",
+		"notes"
 	],
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"publisher": "0KLS0",
 	"icon": "logo.png",
 	"engines": {
@@ -23,7 +23,8 @@
 	"categories": [
 		"Snippets",
 		"Programming Languages",
-		"Notebooks"
+		"Notebooks",
+		"Other"
 	],
 	"activationEvents": [
 		"onLanguage:html",
@@ -32,10 +33,6 @@
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
-			{
-				"command": "htmlcss-completion.helloWorld",
-				"title": "htmlcss-completion"
-			},
 			{
 				"command": "html-completion.insertion",
 				"title": "Liste choix"
@@ -106,5 +103,5 @@
 		"mocha": "^10.2.0",
 		"typescript": "^5.2.2"
 	},
-	"license": "Custom License"
+	"license": "MIT"
 }
