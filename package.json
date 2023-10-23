@@ -2,7 +2,15 @@
 	"name": "htmlcss-completion",
 	"displayName": "HtmlCss-Completion",
 	"description": "Extension Vscode permettant d'ajouter des snippets pour les langages html et css",
-	"version": "1.0.3",
+	"keywords": [
+		"VSCode",
+		"HTML",
+		"CSS",
+		"snippets",
+		"complétion",
+		"bloc-notes"
+	],
+	"version": "1.0.4",
 	"publisher": "0KLS0",
 	"icon": "logo.png",
 	"engines": {
@@ -13,7 +21,9 @@
 		"url": "https://github.com/IKLSI/HtmlCSS-Completion"
 	},
 	"categories": [
-		"Other"
+		"Snippets",
+		"Programming Languages",
+		"Notebooks"
 	],
 	"activationEvents": [
 		"onLanguage:html",
@@ -37,6 +47,10 @@
 			{
 				"command": "html-completion.github",
 				"title": "Voir la page de l'extension"
+			},
+			{
+				"command": "html-completion.openNotesWindow",
+				"title": "Bloc notes"
 			}
 		],
 		"languages": [

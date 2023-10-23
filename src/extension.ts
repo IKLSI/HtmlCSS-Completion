@@ -1,37 +1,21 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
 	console.log('Congratulations, your extension "html-completion" is now active!');
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
 	let disposable = vscode.commands.registerCommand('html-completion.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
 		vscode.window.showInformationMessage('Hello World from Html-Completion!');
 	});
 
 	let insertion = vscode.commands.registerCommand('html-completion.insertion', async () => {
-		// Demander à l'utilisateur de saisir le nombre d'éléments <li> à créer
 		const numItems = await vscode.window.showInputBox({
 			prompt: 'Combien d\'éléments <li> voulez-vous créer ?',
 			placeHolder: 'Entrez un nombre'
 		});
-	
+
 		if (numItems) {
-			// Générer le code HTML avec le nombre spécifié de balises <li> avec indentation
-			const indentation = '\t';  // Utilisez ici le caractère d'indentation souhaité
+			const indentation = '\t';
 			const liItems = Array.from({ length: parseInt(numItems) }, () => `${indentation}<li>$1</li>`).join('\n');
-	
-			// Insérer le code HTML dans l'éditeur
 			const editor = vscode.window.activeTextEditor;
 			if (editor) {
 				editor.insertSnippet(new vscode.SnippetString(`<ul>\n${liItems}\n</ul>`));
@@ -48,12 +32,119 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.env.openExternal(vscode.Uri.parse('https://marketplace.visualstudio.com/items?itemName=0KLS0.htmlcss-completion'));
 		vscode.window.showInformationMessage('Merci pour votre soutien !');
 	});
-	
+
+	let openNotes = vscode.commands.registerCommand('html-completion.openNotesWindow', () => {
+		const panel = vscode.window.createWebviewPanel(
+			'notesPanel',
+			'Bloc-notes',
+			vscode.ViewColumn.One,
+			{
+				enableScripts: true,
+			}
+		);
+
+		panel.webview.html = getWebViewContent(panel);
+
+		panel.webview.onDidReceiveMessage(message => {
+			if (message.command === 'saveNote') {
+				const noteContent = message.note;
+				vscode.window.showSaveDialog({ filters: { 'Text Files': ['txt'] } }).then(fileUri => {
+					if (fileUri) {
+						const fs = require('fs');
+						fs.writeFileSync(fileUri.fsPath, noteContent);
+						vscode.window.showInformationMessage(`Note enregistrée sous ${fileUri.fsPath}`);
+					}
+				});
+			}
+		});
+	});
+
+	context.subscriptions.push(openNotes);
 	context.subscriptions.push(disposable);
 	context.subscriptions.push(insertion);
 	context.subscriptions.push(validateur);
 	context.subscriptions.push(github);
 }
 
-// This method is called when your extension is deactivated
 export function deactivate() {}
+
+function getWebViewContent(panel: vscode.WebviewPanel) {
+	const vscodeSettings = vscode.workspace.getConfiguration('workbench');
+	const isDarkTheme = vscodeSettings.get('colorTheme') === 'Dark+ (default)';
+
+	// HTML content for the webview
+	return `
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Bloc-notes</title>
+		<style>
+			body {
+				background-color: ${isDarkTheme ? '#333' : '#f5f5f5'};
+				color: ${isDarkTheme ? 'white' : 'black'};
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+				font-family: poppins;
+				font-weight: bold;
+			}
+	
+			h1 {
+				font-size: 24px;
+				margin-bottom: 20px;
+				text-transform: uppercase;
+				font-family: arial;
+			}
+	
+			#note-content {
+				width: 100%;
+				max-width: 600px;
+				height: 200px;
+				padding: 10px;
+				border: 1px solid ${isDarkTheme ? '#777' : '#ccc'};
+				border-radius: 5px;
+				resize: none;
+			}
+	
+			#save-button {
+				background-color: ${isDarkTheme ? '#007ACC' : '#0099E5'};
+				color: white;
+				border: none;
+				padding: 10px 20px;
+				border-radius: 5px;
+				cursor: pointer;
+				font-size: 16px;
+				margin-top: 10px;
+			}
+	
+			#save-button:hover {
+				background-color: ${isDarkTheme ? '#005F99' : '#007ACC'};
+			}
+	
+			#save-button:active {
+				background-color: ${isDarkTheme ? '#004C80' : '#0066B2'};
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Rédiger une note</h1>
+		<textarea id="note-content" rows="10" cols="50"></textarea>
+		<br>
+		<button id="save-button">Enregistrer</button>
+	
+		<script>
+			const vscode = acquireVsCodeApi();
+	
+			document.getElementById('save-button').addEventListener('click', () => {
+				const noteContent = document.getElementById('note-content').value;
+				vscode.postMessage({ command: 'saveNote', note: noteContent });
+			});
+		</script>
+	</body>
+	</html>
+	`;
+}

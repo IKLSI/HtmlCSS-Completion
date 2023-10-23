@@ -8,6 +8,8 @@ HTMLCSS Completion est une extension pour Visual Studio Code qui facilite le dé
 
 L'extension comprend un ensemble de snippets pour générer des balises HTML, des styles CSS, des éléments de mise en page, et bien plus encore. Que vous soyez un développeur web débutant ou expérimenté, HTMLCSS Completion peut vous faire gagner du temps en accélérant le processus de développement.
 
+<a href="https://marketplace.visualstudio.com/items?itemName=0KLS0.htmlcss-completion" target="_blank"><img src="./src/assets/Apercu.png"></a>
+
 ## Exemples de fonctionnalités
 
 ### Génère l'en-tête HTML de base
@@ -21,7 +23,7 @@ L'extension comprend un ensemble de snippets pour générer des balises HTML, de
 - Description : Insère un pied de page générique.
 
 ### Insère un formulaire avec différents champs
-
+"
 - Préfixe : `form`
 - Description : Insère un formulaire avec différents champs.
 
@@ -58,26 +60,11 @@ Il n'y a actuellement aucun problème connu avec cette extension.
 
 ## Notes de Version
 
-### 1.0.0
+Les notes de version sont disponibles dans le fichier CHANGELOG.md.
 
-- Version initiale de l'extension.
+<b>Version actuelle :</b>
 
-### 1.0.1
-
-- Ajout d'une Licence.
-- Ajout et modification de snippets concernant la partie CSS.
-
-### 1.0.2
-
-- Ajout d'un logo pour l'extension.
-
-### 1.0.3
-
-- Ajout de nombreux snippets concernant pour la partie HTML et CSS.
-- Ajout de plusieurs commandes exécutables avec le raccourci clavier `Ctrl+Shift+P`.
-- Amélioration de la documentation.
-
----
+<a href="https://marketplace.visualstudio.com/items?itemName=0KLS0.html-completion" target="_blank"><img src="https://img.shields.io/badge/Visual%20Studio%20Marketplace-v1.0.4-blue?style=for-the-badge&logo=visual-studio-code" alt="Visual Studio Marketplace Version"></a>
 
 ## Support et Commentaires
 
@@ -87,4 +74,4 @@ Si vous rencontrez des problèmes ou avez des commentaires, n'hésitez pas à [s
 
 ## Auteur
 
-Cette extension a été créée par 0KLS0.
+<a href="https://github.com/IKLSI/HtmlCSS-Completion" target="_blank"><img src="https://img.shields.io/badge/GitHub-0KLS0%2FHtmlCSS--Completion-blue?style=for-the-badge&logo=github" alt="GitHub Repository"></a>
