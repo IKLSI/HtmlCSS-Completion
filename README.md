@@ -23,7 +23,7 @@ L'extension comprend un ensemble de snippets pour générer des balises HTML, de
 - Description : Insère un pied de page générique.
 
 ### Insère un formulaire avec différents champs
-"
+
 - Préfixe : `form`
 - Description : Insère un formulaire avec différents champs.
 
