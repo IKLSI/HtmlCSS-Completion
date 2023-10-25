@@ -6,13 +6,14 @@
 		"VSCode",
 		"HTML",
 		"CSS",
-		"snippets",
-		"autocomplétion",
-		"notes"
+		"Snippets",
+		"Autocompletion",
+		"Notes",
+		"Tools"
 	],
-	"version": "1.0.5",
+	"version": "1.0.7",
 	"publisher": "0KLS0",
-	"icon": "logo.png",
+	"icon": "Logo.png",
 	"engines": {
 		"vscode": "^1.83.0"
 	},

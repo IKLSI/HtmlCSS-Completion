@@ -67,7 +67,6 @@ function getWebViewContent(panel: vscode.WebviewPanel) {
 	const vscodeSettings = vscode.workspace.getConfiguration('workbench');
 	const isDarkTheme = vscodeSettings.get('colorTheme') === 'Dark+ (default)';
 
-	// HTML content for the webview
 	return `
 	<!DOCTYPE html>
 	<html>

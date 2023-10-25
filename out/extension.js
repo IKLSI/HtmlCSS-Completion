@@ -55,7 +55,6 @@ exports.deactivate = deactivate;
 function getWebViewContent(panel) {
     const vscodeSettings = vscode.workspace.getConfiguration('workbench');
     const isDarkTheme = vscodeSettings.get('colorTheme') === 'Dark+ (default)';
-    // HTML content for the webview
     return `
 	<!DOCTYPE html>
 	<html>

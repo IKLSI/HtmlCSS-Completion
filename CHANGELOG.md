@@ -53,3 +53,16 @@ save it and close it.
 ### Deleted
 
 - Deleted diffents commands becomming useless.
+
+## [1.0.6] - 10/25/2023
+
+### Updated
+
+- Updated the README.md file.
+- Updated the structure of the extension.
+
+## [1.0.7] - 10/25/2023
+
+### Updated
+
+- Added the number of downloads of the extension in the README.md file.

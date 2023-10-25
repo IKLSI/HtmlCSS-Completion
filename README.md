@@ -37,7 +37,7 @@ L'extension comprend un ensemble de snippets pour générer des balises HTML, de
 - Préfixe : `Valider le code HTML`
 - Description : Ouvre la page de validation W3C pour valider le code HTML.
 
-- Préfixe : `Voir la page de l'exension`
+- Préfixe : `Voir la page de l'extension`
 - Description : Ouvre le fichier README.md de l'extension.
 
 - Préfixe : `Liste choix`
@@ -64,7 +64,7 @@ Les notes de version sont disponibles dans le fichier CHANGELOG.md.
 
 <b>Version actuelle :</b>
 
-<a href="https://marketplace.visualstudio.com/items?itemName=0KLS0.html-completion" target="_blank"><img src="https://img.shields.io/badge/Visual%20Studio%20Marketplace-v1.0.5-blue?style=for-the-badge&logo=visual-studio-code" alt="Visual Studio Marketplace Version"></a>
+<a href="https://marketplace.visualstudio.com/items?itemName=0KLS0.htmlcss-completion" target="_blank"><img src="https://img.shields.io/badge/Visual%20Studio%20Marketplace-v1.0.7-blue?style=for-the-badge&logo=visual-studio-code" alt="Visual Studio Marketplace Version"></a>
 
 ## Support et Commentaires
 
@@ -74,4 +74,4 @@ Si vous rencontrez des problèmes ou avez des commentaires, n'hésitez pas à [s
 
 ## Auteur
 
-<a href="https://github.com/IKLSI/HtmlCSS-Completion" target="_blank"><img src="https://img.shields.io/badge/GitHub-0KLS0%2FHtmlCSS--Completion-blue?style=for-the-badge&logo=github" alt="GitHub Repository"></a>
+<a href="https://github.com/IKLSI/HtmlCSS-Completion" target="_blank"><img src="https://img.shields.io/badge/GitHub-0KLS0%2FHtmlCSS--Completion-blue?style=for-the-badge&logo=github" alt="GitHub Repository"></a> <a href="https://marketplace.visualstudio.com/items?itemName=0KLS0.htmlcss-completion" target="_blank"><img src="https://img.shields.io/visual-studio-marketplace/d/0KLS0.htmlcss-completion?style=for-the-badge&logo=visual-studio-code" alt="Visual Studio Marketplace Downloads"></a>
